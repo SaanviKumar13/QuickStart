@@ -1,7 +1,7 @@
 {
   "name": "quick-start",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CLI tool to bootstrap your projects.",
   "main": "index.js",
   "scripts": {
     "start": "node build/index.js",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Saanvi Kumar",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.9",
