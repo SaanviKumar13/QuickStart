@@ -1,7 +1,14 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
+import quickstart from "./quickstart.js";
 
 const questions = [
+	{
+		type: "input",
+		name: "projectName",
+		message: "Enter a project name:",
+		default: "my-project",
+	},
 	{
 		type: "list",
 		name: "architecture",
@@ -121,6 +128,7 @@ export default async function start() {
 
 	if (confirm.confirm == "yes") {
 		console.log(chalk.hex("#BACD92")("QuickStarting you project...."));
+		await quickstart(answers);
 	} else {
 		console.log(chalk.hex("#FEEFAD")("Restarting..."));
 		await start();
