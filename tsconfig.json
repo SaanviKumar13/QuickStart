@@ -1,13 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "outDir": "./build",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "build", "**/*.js"]
-}
+    "compilerOptions": {
+      "rootDir": "src",
+      "outDir": "dist",
+      "strict": true,
+      "target": "es6",
+      "module": "NodeNext",
+      "sourceMap": true,
+      "esModuleInterop": true,
+      "moduleResolution": "NodeNext",
+    }
+  }
