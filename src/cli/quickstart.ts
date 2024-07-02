@@ -2,13 +2,17 @@ import path from "path";
 import fs from "fs-extra";
 
 export default async function quickstart(answers: any) {
-	const projectDir = path.join(process.cwd(), answers.projectName);
+	const projectDir = path.join("D:\\Projects", answers.projectName);
 	const template = getTemplate(answers);
 	if (template === null) throw new Error("Template not found");
 	try {
-		await fs.copy(path.join(process.cwd(), "\\src\\templates", template), projectDir, {
-			overwrite: true,
-		});
+		await fs.copy(
+			path.join(process.cwd(), "\src\\templates", template),
+			projectDir,
+			{
+				overwrite: true,
+			},
+		);
 		console.log(
 			`Project ${answers.projectName} created successfully at ${projectDir}`,
 		);
